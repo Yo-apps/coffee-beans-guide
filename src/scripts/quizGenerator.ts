@@ -46,7 +46,7 @@ interface QuizQuestion {
 }
 
 // ナレッジベースからランダムなトピックを取得
-async function getRandomTopic(excludeFiles: string[] = []): Promise<{content: string, metadata: any}> {
+async function getRandomTopic(excludeFiles: string[] = []): Promise<{content: string, metadata: any, _filename: string}> {
   const processedDir = path.join(process.cwd(), 'database', 'processed');
   const files = await fs.readdir(processedDir);
   const jsonFiles = files
