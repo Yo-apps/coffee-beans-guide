@@ -1,0 +1,35 @@
+{
+  "title": "About Coffee",
+  "content": "National Coffee Association/About Coffee\n            \n            \n                \n                \n            \n        \n        \n\n        \n        \n            \n\n\n    \n\t\nAbout Coffee\nWe believe that coffee is more than just a drink: It’s a culture, an economy, an art, a science — and a passion.\n\n\n\n\n\n\n\n\n        \n\n        \n        \n            \n\n\n    \n\t\n\t\n\t\tvisit aboutcoffee.org\n\t\n\t\n\t\tA guide to our consumer website all about coffee—from its origins to the different types of coffee, brewing methods, independent research on coffee and health, and more.\n\t\t\n\t\n\t\n\t\t \n\t\t\n\t\n\n\n\n\n\n\n\n\n            \n\n\n    \n\t\n\t\n\t\tNCA Sustainability Showcase\n\t\n\t\n\t\tWe are proud to recognize the important work that NCA members are doing across the sector, from improving the conditions at origin to developing eco-friendly facilities and recyclable packaging materials.\n\t\t\n\t\n\t\n\t\t \n\t\t\n\t\n\n\n\n\n\n\n\n\n            \n\n\n    \n\t\n\t\n\t\tNCA Coffee Gives Back Charity Showcase\n\t\n\t\n\t\tAs part of the NCA Coffee Gives Back program, this charity showcase amplifies the visibility of organizations dedicated to supporting coffee origin communities.\n\t\t\n\t\n\t\n\t\t \n\t\t\n\t\n\n\n\n\n\n\n\n\n        \n        \n\n        \n        \n\n            \n            \n\n\n    \n\t\n\n\n\n\n\n\n\n\n            \n            \n\n                \n                    \n                    \n\n\n    \n\n\n\n  var protocol = document.location.protocol == \"https:\" ? \"https\" : \"http\";\n  var z = document.createElement(\"script\");\n  z.type = \"text/javascript\";\n  z.src = protocol + \"://s.zkcdn.net/ados.js\";\n  z.async = true;\n  var s = document.getElementsByTagName(\"script\")[0];\n  s.parentNode.insertBefore(z,s);\n\n\n  var ados = ados || {};\n  ados.run = ados.run || [];\n  ados.run.push(function() {\n    /* load placement for account: Multiview, site: NCAUSAweb - National Coffee Association - MultiWeb, size: 300x250 - Medium Rectangle, zone: NCAUSAweb Box ad (300x250) */\n    ados_add_placement(4466, 775316, \"mvBoxAd\", 5).setZone(171418);\n    ados_setDomain(\"engine.multiview.com\");\n    ados_load();\n  });",
+  "metadata": {
+    "url": "https://www.ncausa.org/About-Coffee",
+    "language": "ja",
+    "source": "www.ncausa.org",
+    "scrapedAt": "2025-02-27T20:37:25.815Z",
+    "processedAt": "2025-02-27T20:57:34.857Z"
+  },
+  "analysis": {
+    "topics": [
+      "コーヒーの文化",
+      "コーヒーの経済",
+      "コーヒーの芸術",
+      "コーヒーの科学",
+      "コーヒーの情熱",
+      "コーヒーの種類",
+      "コーヒーの淹れ方",
+      "コーヒーと健康に関する研究",
+      "持続可能性",
+      "慈善活動",
+      "コーヒー生産地"
+    ],
+    "keyPoints": [
+      "コーヒーは単なる飲み物以上の存在である",
+      "aboutcoffee.orgはコーヒーに関する総合的な情報源である",
+      "NCAは持続可能性の取り組みを推進している",
+      "NCAはコーヒー生産地を支援する慈善活動を支援している"
+    ],
+    "difficulty": "beginner",
+    "summary": "コーヒーは単なる飲み物ではなく、文化、経済、芸術、科学、情熱である。NCAは、コーヒーに関するウェブサイトaboutcoffee.orgを通じて情報を提供し、持続可能性とコーヒー生産地を支援する慈善活動を推進している。",
+    "trustScore": 90
+  }
+}

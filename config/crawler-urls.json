@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://www.ucc.co.jp/contents/coffee/",
+    "language": "ja",
+    "priority": 1
+  },
+  {
+    "url": "https://www.tullys.co.jp/menu/beans/",
+    "language": "ja",
+    "priority": 1
+  },
+  {
+    "url": "https://www.scaj.org/coffee/",
+    "language": "ja",
+    "priority": 1
+  },
+  {
+    "url": "https://www.ncausa.org/About-Coffee",
+    "language": "en",
+    "priority": 1
+  },
+  {
+    "url": "https://sca.coffee/research",
+    "language": "en",
+    "priority": 1
+  },
+  {
+    "url": "https://perfectdailygrind.com/learn/",
+    "language": "en",
+    "priority": 2
+  },
+  {
+    "url": "https://www.kurasu.kyoto/blogs/kurasu-journal",
+    "language": "ja",
+    "priority": 2
+  },
+  {
+    "url": "https://www.unicafe.com/coffee-knowledge/",
+    "language": "ja",
+    "priority": 2
+  },
+  {
+    "url": "https://www.coffeereview.com/coffee-reference/",
+    "language": "en",
+    "priority": 1
+  },
+  {
+    "url": "https://www.sarutahiko.co/blogs/coffee-times",
+    "language": "ja",
+    "priority": 1
+  },
+  {
+    "url": "https://www.ogawa.co.jp/knowledge/coffee/",
+    "language": "ja",
+    "priority": 1
+  },
+  {
+    "url": "https://www.kaldi.co.jp/coffee/guide/",
+    "language": "ja",
+    "priority": 1
+  },
+  {
+    "url": "https://www.brooks.co.jp/knowledge/",
+    "language": "ja",
+    "priority": 1
+  },
+  {
+    "url": "https://www.homegrounds.co/",
+    "language": "en",
+    "priority": 2
+  }
+] 

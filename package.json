@@ -8,15 +8,20 @@
     "start": "next start",
     "lint": "next lint",
     "update-data": "ts-node src/scripts/updateCoffeeData.ts",
-    "generate-hash": "node src/scripts/generate-password-hash.js"
+    "generate-hash": "node src/scripts/generate-password-hash.js",
+    "crawler:start": "ts-node src/scripts/crawlerCLI.ts start",
+    "crawler:stop": "ts-node src/scripts/crawlerCLI.ts stop",
+    "crawler:status": "ts-node src/scripts/crawlerCLI.ts status",
+    "crawler:add-url": "ts-node src/scripts/crawlerCLI.ts add-url"
   },
   "dependencies": {
     "@google/generative-ai": "^0.22.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.8",
-    "axios": "^1.7.9",
+    "axios": "^1.8.1",
     "bcryptjs": "^3.0.2",
     "cheerio": "^1.0.0",
+    "commander": "^13.1.0",
     "dotenv": "^16.4.7",
     "framer-motion": "^12.4.7",
     "jose": "^6.0.8",
