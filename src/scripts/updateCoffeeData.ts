@@ -299,8 +299,23 @@ async function analyzeWithGemini(product: ScrapedProduct): Promise<ProductAnalys
     const response = await result.response;
     const text = response.text();
     
+    // マークダウン形式のJSONレスポンスを処理
+    let jsonText = text;
+    
+    // ```json で始まる場合、マークダウン記法を取り除く
+    if (text.trim().startsWith('```json')) {
+      const startIndex = text.indexOf('{');
+      const endIndex = text.lastIndexOf('}');
+      
+      if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
+        jsonText = text.substring(startIndex, endIndex + 1);
+      }
+    }
+    
+    console.log(`解析結果のJSONテキスト: ${jsonText.substring(0, 50)}...`); // デバッグ用
+    
     // JSONをパース
-    const analysis = JSON.parse(text) as ProductAnalysisEnglish;
+    const analysis = JSON.parse(jsonText) as ProductAnalysisEnglish;
     
     // 解析結果を返す
     return {
@@ -320,6 +335,45 @@ async function analyzeWithGemini(product: ScrapedProduct): Promise<ProductAnalys
       風味ノート: [],
       特徴: [],
       要約: '解析に失敗しました'
+    };
+  }
+}
+
+// タグの生成
+async function generateTags(analysis: ProductAnalysisType): Promise<{ 焙煎度タグ: string[], 風味タグ: string[], 特徴タグ: string[] }> {
+  try {
+    console.log(`商品「${analysis.name}」のタグ生成を開始...`);
+    
+    const prompt = createAdvancedGenerateTagsPrompt(analysis);
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    
+    // マークダウン形式のJSONレスポンスを処理
+    let jsonText = text;
+    
+    // ```json で始まる場合、マークダウン記法を取り除く
+    if (text.trim().startsWith('```json')) {
+      const startIndex = text.indexOf('{');
+      const endIndex = text.lastIndexOf('}');
+      
+      if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
+        jsonText = text.substring(startIndex, endIndex + 1);
+      }
+    }
+    
+    console.log(`タグ生成結果のJSONテキスト: ${jsonText.substring(0, 50)}...`); // デバッグ用
+    
+    // JSONをパース
+    const tags = JSON.parse(jsonText) as { 焙煎度タグ: string[], 風味タグ: string[], 特徴タグ: string[] };
+    
+    return tags;
+  } catch (error) {
+    console.error(`商品「${analysis.name}」のタグ生成に失敗:`, error);
+    return {
+      焙煎度タグ: [],
+      風味タグ: [],
+      特徴タグ: []
     };
   }
 }
@@ -346,9 +400,11 @@ async function updateCoffeeData(): Promise<void> {
     const analyzedProducts = await Promise.all(
       scrapedProducts.map(async (product) => {
         const analysis = await analyzeWithGemini(product);
+        const tags = await generateTags(analysis);
         return {
           ...product,
           ...analysis,
+          tags,
           soldOut: false
         };
       })

@@ -5,17 +5,17 @@ import * as fs from 'fs/promises';
 export async function GET() {
   try {
     // パスを修正
-    const taggedDataPath = path.join(process.cwd(), 'src/data/analyzed', 'taggedCoffeeData.json');
+    const analyzedDataPath = path.join(process.cwd(), 'src/data/analyzed', 'analyzedCoffeeData.json');
     const questionsPath = path.join(process.cwd(), 'src/data/analyzed', 'questionFlow.json');
 
     // ファイルの存在確認
     await Promise.all([
-      fs.access(taggedDataPath),
+      fs.access(analyzedDataPath),
       fs.access(questionsPath)
     ]);
 
     const [productsData, questionsData] = await Promise.all([
-      fs.readFile(taggedDataPath, 'utf-8'),
+      fs.readFile(analyzedDataPath, 'utf-8'),
       fs.readFile(questionsPath, 'utf-8')
     ]);
 
